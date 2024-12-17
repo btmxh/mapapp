@@ -20,6 +20,7 @@
 #include <mutex>
 #include <nanoflann.hpp>
 #include <optional>
+#include <random>
 #include <ranges>
 #include <thread>
 #include <utility>
@@ -137,6 +138,27 @@ int main(int argc, char *argv[]) {
 
   std::optional<mapapp::osm_graph::index_t> start, end;
   glm::vec2 start_pos, end_pos;
+
+  for (std::size_t i = 0; i < 1000; ++i) {
+    static std::mt19937 rng;
+    using id_t = mapapp::osm_graph::index_t;
+    id_t start, end;
+    do {
+      start =
+          std::uniform_int_distribution<id_t>{0, graph.nodes.size() - 1}(rng);
+      end = std::uniform_int_distribution<id_t>{0, graph.nodes.size() - 1}(rng);
+    } while (start == end);
+
+    for (std::size_t k = 0; k < algos.size(); ++k) {
+      auto time_start = algo_state::now();
+      auto result = mapapp::algorithms[k](std::stop_token{}, graph, start, end);
+      result.finish_time = algo_state::now();
+      fmt::println(
+          "{} {} {} {} {} {} {}", k, start, end, result.distance,
+          std::chrono::nanoseconds{result.finish_time - time_start}.count(),
+          result.mem_stat.max_allocated, result.mem_stat.total_allocated);
+    }
+  }
 
   enum class PickPointState {
     Pending,

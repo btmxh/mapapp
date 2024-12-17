@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 3.14)
 project(mapapp C CXX)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+find_package(glfw3 REQUIRED)
 find_package(glad REQUIRED)
-find_package(Osmium REQUIRED)
+find_package(Osmium REQUIRED COMPONENTS pbf)
 find_package(fmt REQUIRED)
-find_package(ZLIB REQUIRED)
 find_package(glm REQUIRED)
 
 file(
