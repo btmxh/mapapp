@@ -8,6 +8,7 @@ find_package(glad REQUIRED)
 find_package(Osmium REQUIRED COMPONENTS pbf)
 find_package(fmt REQUIRED)
 find_package(glm REQUIRED)
+find_package(nanoflann REQUIRED)
 
 file(
   GLOB_RECURSE mapapp_SOURCES CONFIGURE_DEPENDS
@@ -17,4 +18,4 @@ file(
 add_executable(mapapp "${mapapp_SOURCES}")
 target_compile_features(mapapp PRIVATE cxx_std_20)
 target_include_directories(mapapp PRIVATE ${OSMIUM_INCLUDE_DIRS})
-target_link_libraries(mapapp PRIVATE glfw fmt::fmt ZLIB::ZLIB glad)
+target_link_libraries(mapapp PRIVATE glfw fmt::fmt ZLIB::ZLIB glad::glad nanoflann::nanoflann)
