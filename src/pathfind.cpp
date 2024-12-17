@@ -9,7 +9,6 @@
 #include <memory>
 #include <optional>
 #include <set>
-#include <strings.h>
 
 namespace mapapp {
 osm_graph::osm_graph(const map_loader &map) : nn_tree{2, nodes} {
