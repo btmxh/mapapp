@@ -4,7 +4,7 @@
 #include "gl.hpp"
 #include "graphics_context.hpp"
 #include <cstddef>
-#include <glad/gl.h>
+#include <glad/glad.h>
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
 #include <vector>

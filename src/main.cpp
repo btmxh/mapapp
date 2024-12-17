@@ -13,7 +13,7 @@
 #include <cstdio>
 #include <fmt/ranges.h>
 #include <future>
-#include <glad/gl.h>
+#include <glad/glad.h>
 #include <glm/ext/vector_double2.hpp>
 #include <glm/ext/vector_uint4_sized.hpp>
 #include <mapbox/earcut.hpp>

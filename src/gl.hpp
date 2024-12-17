@@ -1,7 +1,7 @@
 #pragma once
 
 #include <array>
-#include <glad/gl.h>
+#include <glad/glad.h>
 #include <stdexcept>
 #include <string_view>
 #include <utility>

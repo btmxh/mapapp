@@ -1,4 +1,4 @@
 #define NK_IMPLEMENTATION
 #define NK_GLFW_GL3_IMPLEMENTATION
-#include <glad/gl.h>
+#include <glad/glad.h>
 #include "nk.h"

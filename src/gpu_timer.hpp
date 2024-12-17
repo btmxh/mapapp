@@ -2,7 +2,7 @@
 
 #include "gl.hpp"
 #include <chrono>
-#include <glad/gl.h>
+#include <glad/glad.h>
 
 namespace mapapp {
 struct gpu_timer {
