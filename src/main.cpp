@@ -139,7 +139,7 @@ int main(int argc, char *argv[]) {
   std::optional<mapapp::osm_graph::index_t> start, end;
   glm::vec2 start_pos, end_pos;
 
-  for (std::size_t i = 0; i < 1000; ++i) {
+  for (std::size_t i = 0; i < 0; ++i) {
     static std::mt19937 rng;
     using id_t = mapapp::osm_graph::index_t;
     id_t start, end;

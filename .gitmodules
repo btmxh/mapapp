@@ -1,0 +1,30 @@
+[submodule "third_party/glfw"]
+	path = third_party/glfw
+	url = https://github.com/glfw/glfw
+[submodule "third_party/libosmium"]
+	path = third_party/libosmium
+	url = https://github.com/osmcode/libosmium
+[submodule "third_party/glad-46-core-allexts"]
+	path = third_party/glad-46-core-allexts
+	url = https://github.com/btmxh/glad-46-core-allexts
+[submodule "third_party/earcut.hpp"]
+	path = third_party/earcut.hpp
+	url = https://github.com/mapbox/earcut.hpp
+[submodule "third_party/nanoflann"]
+	path = third_party/nanoflann
+	url = https://github.com/jlblancoc/nanoflann
+[submodule "third_party/glm"]
+	path = third_party/glm
+	url = https://github.com/g-truc/glm
+[submodule "third_party/fmt"]
+	path = third_party/fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "third_party/Polyline2D"]
+	path = third_party/Polyline2D
+	url = https://github.com/CrushedPixel/Polyline2D
+[submodule "protozero"]
+	path = third_party/protozero
+	url = https://github.com/mapbox/protozero
+[submodule "third_party/Nuklear"]
+	path = third_party/Nuklear
+	url = https://github.com/Immediate-Mode-UI/Nuklear
