@@ -284,6 +284,12 @@ template <class K, class V> struct pf_priority_queue {
       return std::nullopt;
     }
 
+    if(heap.size() == 1) {
+      auto pair = heap.back();
+      heap.pop_back();
+      return pair;
+    }
+
     swap(0, heap.size() - 1);
     auto pair = heap.back();
     heap.pop_back();

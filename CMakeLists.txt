@@ -11,6 +11,7 @@ file(
 
 add_executable(mapapp "${mapapp_SOURCES}")
 target_compile_features(mapapp PRIVATE cxx_std_20)
+target_compile_definitions(mapapp PUBLIC NOMINMAX)
 target_link_libraries(
   mapapp
   PRIVATE glfw

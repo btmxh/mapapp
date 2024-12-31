@@ -13,7 +13,7 @@
 #include <cstdio>
 #include <fmt/ranges.h>
 #include <future>
-#include <glad/glad.h>
+#include <glad/gl.h>
 #include <glm/ext/vector_double2.hpp>
 #include <glm/ext/vector_uint4_sized.hpp>
 #include <mapbox/earcut.hpp>
@@ -145,8 +145,8 @@ int main(int argc, char *argv[]) {
     id_t start, end;
     do {
       start =
-          std::uniform_int_distribution<id_t>{0, graph.nodes.size() - 1}(rng);
-      end = std::uniform_int_distribution<id_t>{0, graph.nodes.size() - 1}(rng);
+          std::uniform_int_distribution<int>{0, static_cast<int>(graph.nodes.size() - 1)}(rng);
+      end = std::uniform_int_distribution<int>{0, static_cast<int>(graph.nodes.size() - 1)}(rng);
     } while (start == end);
 
     for (std::size_t k = 0; k < algos.size(); ++k) {
