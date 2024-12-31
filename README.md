@@ -12,7 +12,7 @@ cmake -S. -Bbuild
 cmake --build build
 ```
 
-To run, export a PBF file from [OpenStreetMap](https://www.openstreetmap.org/export), then pass the directory to that file as a command line argument:
+To run, export a PBF file from [OpenStreetMap](https://www.openstreetmap.org/export), then pass the path to that file as a command line argument:
 ```sh
 ./build/mapapp ~/Downloads/out.osm.pbf
 ```
