@@ -4,6 +4,7 @@
 #include <fmt/base.h>
 #include <glm/vec4.hpp>
 #include <numeric>
+#include <cstdint>
 #include <osmium/io/pbf_input.hpp>
 #include <osmium/io/reader.hpp>
 #include <osmium/osm/location.hpp>

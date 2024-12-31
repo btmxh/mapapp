@@ -5,7 +5,7 @@
 #define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
 #define NK_INCLUDE_FONT_BAKING
 #define NK_KEYSTATE_BASED_INPUT
-#include <glad/glad.h>
+#include <glad/gl.h>
 #include <nuklear.h>
 #ifdef __cplusplus
 extern "C" {

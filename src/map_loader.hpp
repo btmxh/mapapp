@@ -2,6 +2,7 @@
 
 #include <glm/vec2.hpp>
 #include <map>
+// using __int64 = std::int64_t;
 #include <osmium/handler.hpp>
 #include <osmium/osm/location.hpp>
 #include <osmium/osm/object.hpp>

@@ -83,7 +83,7 @@ void main() {
                                         mapapp::structure>) {
       static auto colors = []() {
         static std::minstd_rand rng;
-        static std::uniform_int_distribution<std::uint8_t> range{128, 255};
+        static std::uniform_int_distribution<int> range{128, 255};
         std::array<glm::u8vec4,
                    static_cast<std::size_t>(mapapp::structure::kind::NUM_KINDS)>
             colors;

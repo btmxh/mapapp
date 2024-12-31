@@ -13,7 +13,7 @@
 #include <cstdio>
 #include <fmt/ranges.h>
 #include <future>
-#include <glad/glad.h>
+#include <glad/gl.h>
 #include <glm/ext/vector_double2.hpp>
 #include <glm/ext/vector_uint4_sized.hpp>
 #include <mapbox/earcut.hpp>
@@ -139,14 +139,14 @@ int main(int argc, char *argv[]) {
   std::optional<mapapp::osm_graph::index_t> start, end;
   glm::vec2 start_pos, end_pos;
 
-  for (std::size_t i = 0; i < 1000; ++i) {
+  for (std::size_t i = 0; i < 0; ++i) {
     static std::mt19937 rng;
     using id_t = mapapp::osm_graph::index_t;
     id_t start, end;
     do {
       start =
-          std::uniform_int_distribution<id_t>{0, graph.nodes.size() - 1}(rng);
-      end = std::uniform_int_distribution<id_t>{0, graph.nodes.size() - 1}(rng);
+          std::uniform_int_distribution<int>{0, static_cast<int>(graph.nodes.size() - 1)}(rng);
+      end = std::uniform_int_distribution<int>{0, static_cast<int>(graph.nodes.size() - 1)}(rng);
     } while (start == end);
 
     for (std::size_t k = 0; k < algos.size(); ++k) {

@@ -1,7 +1,7 @@
 #include "pin_renderer.hpp"
 #include "gl.hpp"
 #include "pin_icons.h"
-#include <glad/glad.h>
+#include <glad/gl.h>
 #include <glm/vec4.hpp>
 
 namespace mapapp {
